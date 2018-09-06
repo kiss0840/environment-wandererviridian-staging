@@ -8,7 +8,6 @@ build: clean
 	helm version
 	helm init --upgrade --stable-repo-url https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
 	helm repo add releases ${CHART_REPO}
-	helm repo add jenkins-x http://chartmuseum.build.cd.jenkins-x.io
 	helm dependency build ${DIR}
 	helm lint ${DIR}
 
